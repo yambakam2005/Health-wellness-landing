@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitalyze - Next-Gen Wellness Community</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2ECC71;
+            --secondary: #3498DB;
+            --dark: #2C3E50;
+            --light: #ECF0F1;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            line-height: 1.6;
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .hero {
+            margin-top: 80px;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .telegram-cta {
+            display: inline-flex;
+            align-items: center;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+
+        .telegram-cta:hover {
+            transform: translateY(-3px);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .feature-card {
+            padding: 2rem;
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .newsletter-form {
+            max-width: 500px;
+            margin: 2rem auto;
+        }
+
+        .ai-chat-bubble {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: white;
+            border-radius: 50px;
+            padding: 1rem 2rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+
+        .social-proof {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .faq-section {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .details-card {
+            margin: 1rem 0;
+            padding: 1rem;
+            border-radius: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .social-proof {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="nav-container">
+            <h1>Vitalyze</h1>
+            <div>
+                <a href="#features" class="text-light">Features</a>
+                <a href="#community" class="text-light ml-3">Community</a>
+                <a href="#faq" class="text-light ml-3">FAQ</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="glass-panel">
+            <h2 class="fade-in">Transform Your Wellness Journey in 2025</h2>
+            <p class="lead">Join 250,000+ members in our AI-powered Telegram wellness community</p>
+            <a href="https://t.me/Btpays" target="_blank" class="telegram-cta mt-3">
+                <i class="fab fa-telegram-plane mr-2"></i> Join Free Community
+            </a>
+        </div>
+    </section>
+
+    <section id="features" class="features-grid">
+        <div class="glass-panel feature-card">
+            <h3>🤖 AI Wellness Coach</h3>
+            <p>24/7 personalized health recommendations powered by quantum machine learning</p>
+        </div>
+        <div class="glass-panel feature-card">
+            <h3>🧬 Biohacking Updates</h3>
+            <p>Latest longevity research and biohacking strategies delivered daily</p>
+        </div>
+        <div class="glass-panel feature-card">
+            <h3>👥 Community Support</h3>
+            <p>Interactive challenges and expert Q&A sessions in our Telegram network</p>
+        </div>
+    </section>
+
+    <section class="social-proof">
+        <div class="glass-panel">
+            <h2>1.2M+</h2>
+            <p>Monthly Wellness Insights Shared</p>
+        </div>
+        <div class="glass-panel">
+            <h2>98%</h2>
+            <p>Member Satisfaction Rate</p>
+        </div>
+        <div class="glass-panel">
+            <h2>500+</h2>
+            <p>Certified Experts Active Daily</p>
+        </div>
+    </section>
+
+    <section class="newsletter-form glass-panel">
+        <h3>Get Premium Updates</h3>
+        <form id="newsletterForm">
+            <input type="email" placeholder="Enter your email for exclusive content" required 
+                   class="form-input" style="width: 100%; padding: 1rem; margin: 1rem 0;">
+            <button type="submit" class="telegram-cta">Subscribe</button>
+        </form>
+    </section>
+
+    <section id="faq" class="faq-section">
+        <div class="glass-panel">
+            <h2>FAQ</h2>
+            <div class="details-card">
+                <details>
+                    <summary>How do I access community features?</summary>
+                    <p>Simply join our Telegram channel and participate in daily wellness activities.</p>
+                </details>
+            </div>
+            <!-- Add more FAQ items -->
+        </div>
+    </section>
+
+    <div class="ai-chat-bubble glass-panel">
+        💬 Ask Vita - Our AI Wellness Assistant
+    </div>
+
+    <footer class="glass-panel text-center" style="margin-top: 4rem;">
+        <div class="social-links">
+            <a href="https://t.me/Btpays" target="_blank" class="mr-2">
+                <i class="fab fa-telegram-plane"></i>
+            </a>
+            <!-- Add other social links -->
+        </div>
+        <p>© 2025 VITALYZE - Next Generation Wellness Community</p>
+    </footer>
+
+    <script>
+        document.getElementById('newsletterForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Add your newsletter integration here
+            alert('Thanks for subscribing! Check your email for confirmation.');
+            this.reset();
+        });
+
+        // Add animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        });
+
+        document.querySelectorAll('.glass-panel').forEach((el) => observer.observe(el));
+    </script>
+</body>
+</html>
